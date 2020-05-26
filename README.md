@@ -4,6 +4,8 @@
 
 Conway's Game of Life implemented in Clojure and animated with [Quil](https://github.com/quil/quil).
 
+![Demo](https://raw.githubusercontent.com/jackdbd/game-of-life/master/demo.gif "Demo GIF of the Game of Life")
+
 ## Usage
 
 This project uses [Leiningen](https://leiningen.org/).
