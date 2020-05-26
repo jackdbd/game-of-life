@@ -8,6 +8,11 @@
   :main game-of-life.core
   :target-path "target/%s"
   :uberjar-name "game-of-life-standalone.jar"
+  :aliases {"format" ["with-profile" "dev" "cljfmt" "fix"]
+            "lint" ["with-profile" "dev" "eastwood"]
+            "static-analysis" ["with-profile" "dev" "kibit"]
+            "fix" ^{:doc "Format code, lint code, perform static analysis."}
+            ["do" ["format"] ["lint"] ["static-analysis"]]}
   :profiles {:uberjar {:aot :all}
              :dev {:dependencies [[io.aviso/pretty "0.1.37"]
                                   [pjstadig/humane-test-output "0.10.0"]]
@@ -17,4 +22,5 @@
                    :plugins [[com.jakemccrary/lein-test-refresh "0.24.1"]
                              [io.aviso/pretty "0.1.37"]
                              [jonase/eastwood "0.3.10"]
-                             [lein-cljfmt "0.6.7" :exclusions [org.clojure/clojure]]]}})
+                             [lein-cljfmt "0.6.7" :exclusions [org.clojure/clojure]]
+                             [lein-kibit "0.1.8"]]}})

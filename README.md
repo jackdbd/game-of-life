@@ -1,44 +1,33 @@
 # game-of-life
 
-FIXME: description
+[![Build Status](https://travis-ci.com/jackdbd/game-of-life.svg?branch=master)](https://travis-ci.org/jackdbd/game-of-life)
 
-## Installation
-
-Download from http://example.com/FIXME.
+Conway's Game of Life implemented in Clojure and animated with [Quil](https://github.com/quil/quil).
 
 ## Usage
 
-FIXME: explanation
+This project uses [Leiningen](https://leiningen.org/).
 
-    $ java -jar game-of-life-0.1.0-standalone.jar [args]
+Play with:
 
-## Options
+```sh
+lein run
+```
 
-FIXME: listing of options this app accepts.
+## Build
 
-## Examples
+Build the [uberjar](https://imagej.net/Uber-JAR):
 
-...
+```sh
+lein uberjar
+```
 
-### Bugs
+Then run the executable:
 
-...
+```sh
+java -jar target/uberjar/game-of-life-standalone.jar
+```
 
-### Any Other Sections
-### That You Think
-### Might be Useful
+## Credits
 
-## License
-
-Copyright © 2020 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+- [Conway's Game of Life by Christophe Grand](http://clj-me.cgrand.net/2011/08/19/conways-game-of-life/)
